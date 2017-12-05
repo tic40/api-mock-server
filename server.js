@@ -11,7 +11,7 @@ const port = 8081
 // allow cors
 server.use(cors())
 // logging
-log4js.configure({
+log4js.configure ({
   appenders: {
     access: { type: 'console' }
   },
@@ -30,16 +30,16 @@ const sslOptions = {
 
 const readJson = (filePath) => {
   return new Promise(resolve => {
-    fs.readFile(filePath, function(err, data){
+    fs.readFile(filePath, (err, data) => {
       resolve(JSON.parse(data))
     })
   })
 }
 
-server.get('/test', (req, res) => {
+server.get ('/test', (req, res) => {
   readJson('db/test.json').then(data => { res.json(data) })
 })
 
-https.createServer(sslOptions, server).listen(port, function() {
+https.createServer (sslOptions, server).listen(port, () => {
   console.log('api server started on port ' + port)
 })
