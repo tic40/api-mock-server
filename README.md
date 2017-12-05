@@ -1,5 +1,11 @@
 # simple api mock server by nodejs express
 
+## Feature
+
+- REST API
+- access logging
+- https
+
 ## Getting Started
 
 install packages via npm
