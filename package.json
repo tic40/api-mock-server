@@ -1,0 +1,26 @@
+{
+  "name": "api-mock-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "log4js": "^2.3.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tic40/api-mock-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tic40/api-mock-server/issues"
+  },
+  "homepage": "https://github.com/tic40/api-mock-server#readme"
+}
