@@ -40,6 +40,16 @@ server.get ('/test', (req, res) => {
   readJson('db/test.json').then(data => { res.json(data) })
 })
 
+console.log('method | endpoint')
+for (let v of server._router.stack) {
+  if (v.route && v.route.path){
+    let path = v.route.path
+    let method = v.route.stack[0].method.toUpperCase()
+    console.log(method + ' | '+ path);
+  }
+}
+console.log()
+
 https.createServer (sslOptions, server).listen(port, () => {
   console.log('api server started on port ' + port)
 })
